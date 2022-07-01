@@ -25,15 +25,5 @@ execute(message) {
     //if no Queue return error
     if (!queue)
       return attentionembed(message, "Helaas, maar er is nu niks om te overslaan").catch(console.error);
-    //if not in the same channel return
-    if (!canModifyQueue(message.member)) return;
-    //set playing to true 
-    queue.playing = true;
-    //end current song
-    queue.connection.dispatcher.end();
-    //send approve message
-    queue.textChannel.send(
-      new MessageEmbed().setColor("#F0EAD6").setAuthor(`Het nummer is overgeslagen!`, "https://pbs.twimg.com/media/DEHVuk9XcAAdnZ5.jpg")
-    ).catch(console.error);
   }
 };
