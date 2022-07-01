@@ -33,7 +33,7 @@ execute(message) {
     queue.connection.dispatcher.end();
     //send approve message
     queue.textChannel.send(
-      new MessageEmbed().setColor("#F0EAD6").setAuthor(`${message.author.username} skipped the song.`, "https://i.redd.it/y3wduhwn4gd61.jpg")
+      new MessageEmbed().setColor("#F0EAD6").setAuthor(`${message.author.username} skipped the song.`, "https://www.looopings.nl/img/foto/090219oje.jpg")
     ).catch(console.error);
   }
 };
