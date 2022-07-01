@@ -24,7 +24,7 @@ execute(message) {
     const queue = message.client.queue.get(message.guild.id);
     //if no Queue return error
     if (!queue)
-      return attentionembed(message, "There is nothing you can skip!").catch(console.error);
+      return attentionembed(message, "Helaas, maar er is nu niks om te overslaan").catch(console.error);
     //if not in the same channel return
     if (!canModifyQueue(message.member)) return;
     //set playing to true 
