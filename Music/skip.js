@@ -33,6 +33,3 @@ execute(message) {
     queue.connection.dispatcher.end();
   }
 };
-  
-  }
-};
