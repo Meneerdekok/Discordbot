@@ -25,5 +25,14 @@ execute(message) {
     //if no Queue return error
     if (!queue)
       return attentionembed(message, "Helaas, maar er is nu niks om te overslaan").catch(console.error);
+    //if not in the same channel return
+    if (!canModifyQueue(message.member)) return;
+    //set playing to true 
+    queue.playing = true;
+    //end current song
+    queue.connection.dispatcher.end();
+  }
+};
+  
   }
 };
