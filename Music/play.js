@@ -167,10 +167,10 @@ async execute(message, args, client) {
         .setColor("#F0EAD6")
         .setThumbnail(thumb)
         .setURL(song.url)
-        .setDescription(`\`\`\`Has been added to the Queue.\`\`\``)
+        .setDescription(`\`\`\`Is toegevoegd aan de wachtlijst.\`\`\``)
         .addField("Estimated time until playing:", `\`${estimatedtime}\``, true)
-        .addField("Position in queue", `**\`${serverQueue.songs.length - 1}\`**`, true)
-        .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+        .addField("Positie in de wachtlijst", `**\`${serverQueue.songs.length - 1}\`**`, true)
+        .setFooter(`Aangevraagd door: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       //send the Embed into the Queue Channel
         return serverQueue.textChannel
         .send(newsong)
