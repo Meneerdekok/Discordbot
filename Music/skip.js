@@ -33,7 +33,7 @@ execute(message) {
     queue.connection.dispatcher.end();
     //send approve message
     queue.textChannel.send(
-      new MessageEmbed().setColor("#F0EAD6").setAuthor(`${message.author.username} skipped the song.`, "https://pbs.twimg.com/media/DEHVuk9XcAAdnZ5.jpg")
+      new MessageEmbed().setColor("#F0EAD6").setAuthor(`Het nummer is overgeslagen!`, "https://pbs.twimg.com/media/DEHVuk9XcAAdnZ5.jpg")
     ).catch(console.error);
   }
 };
